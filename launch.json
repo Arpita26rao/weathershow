@@ -1,0 +1,31 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Launch Chrome for Weather App",
+            "url": "http://localhost:8080",
+            "webRoot": "${workspaceFolder}",
+            "port": 9222,
+            "sourceMaps": true,
+            "preLaunchTask": "start-server",
+            "timeout": 30000,
+            "breakOnLoad": false
+        },
+        {
+            "type": "chrome",
+            "request": "attach",
+            "name": "Attach to Chrome",
+            "port": 9222,
+            "webRoot": "${workspaceFolder}",
+            "sourceMaps": true
+        }
+    ],
+    "compounds": [
+        {
+            "name": "Weather App Full Debug",
+            "configurations": ["Launch Chrome for Weather App"]
+        }
+    ]
+}
